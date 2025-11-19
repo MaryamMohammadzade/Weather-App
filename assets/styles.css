@@ -150,3 +150,34 @@ font-size: 14px;
         width: 25px;
     }
 }
+
+.history {
+    display: none;
+    margin: 24px 0px 0px 24px;
+    color: #333;
+}
+
+.history p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.history-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.history-list li {
+    background: #ebfffc;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.history-list li:hover {
+    background: #d7f7f3;
+}

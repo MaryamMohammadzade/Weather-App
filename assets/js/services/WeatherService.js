@@ -1,4 +1,5 @@
 import { IWeatherService } from "./IWeatherService.js";
+
 // API Handling
 export class WeatherService extends IWeatherService{
     constructor(apiKey, apiUrl) {

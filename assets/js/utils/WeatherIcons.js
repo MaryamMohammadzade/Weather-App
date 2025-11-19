@@ -12,10 +12,10 @@ export class WeatherIcons {
 
         for (let key in iconMap) {
             if (iconMap[key].includes(code)) {
-                return `../../images/${key}.png`;
+                return `assets/images/${key}.png`;
             }
         }
 
-        return "../../images/clear.png";
+        return "assets/images/clear.png";
     }
 }

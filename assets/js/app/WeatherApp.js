@@ -1,10 +1,12 @@
 import { WeatherMapper } from "../utils/WeatherMapper.js";
+import {SessionService} from "../services/SessionService.js";
 
 // Weather App
 export class WeatherApp {
     constructor(service, ui) {
         this.service = service;
         this.ui = ui;
+        this.session = new SessionService(); 
 
         const input = document.querySelector(".search input");
         const btn = document.querySelector(".search button");
@@ -20,6 +22,8 @@ export class WeatherApp {
             const data = await this.service.fetchWeather(city);
             const model = WeatherMapper.toUIModel(data);
             this.ui.update(model);
+            this.session.saveSearch(city);
+            this.ui.renderHistory(this.session.getSearches());
 
         } catch (err) {
             this.ui.showError();
